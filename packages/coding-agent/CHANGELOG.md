@@ -27,6 +27,7 @@
 ### Fixed
 
 - With the omp extension in several Chrome profiles, the browser relay no longer sees only the most recently started one: `browser.targets()` lists the pages of every relay, `target` adopts a page from the relay that has it, and `app` set to a relay's URL opens new tabs in that profile
+- Browser tool now lists and adopts pages from every running relay when the omp extension runs in several Chrome profiles ([#20293](https://github.com/can1357/oh-my-pi/pull/20293) by [@xiaolikt](https://github.com/xiaolikt))
 - `!command` values in `models.yml` (`apiKey`, `headers`) can now read variables defined in `~/.env` or `~/.omp/agent/.env` on macOS and Windows; previously the command saw an empty value.
 - The bash tool's visualization now draws a script run by `bash file.sh`, `source`, or `eval "$var"` as one block under the command that ran it, instead of repeating a “built at runtime” header above every line of the script.
 - Fixed `RpcClient.onSessionEvent` silently dropping the `config_warnings_changed`, `advisor_cost_changed`, and `advisor_yielded` session events emitted over RPC ([#20254](https://github.com/can1357/oh-my-pi/pull/20254) by [@eggpeat](https://github.com/eggpeat))
